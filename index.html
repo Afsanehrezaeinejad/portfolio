@@ -1,496 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Afsaneh Rezaeinejad — Software QA Engineer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg: #14121b;
-    --panel: #1a1724;
-    --surface: #211d2d;
-    --border: #352e44;
-    --text: #ece9f2;
-    --muted: #9d97b3;
-    --mint: #b199fd;
-    --amber: #ecaef2;
-    --mint-dim: rgba(177,153,253,0.14);
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Afsaneh Rezaeinejad — Senior QA Engineer</title>
+  <meta name="description" content="Senior QA Engineer building reliable automation, API mocks, performance tests, and AI-assisted quality systems for complex products.">
+  <meta name="theme-color" content="#111019">
+  <link rel="canonical" href="https://afsanehrezaeinejad.com/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://afsanehrezaeinejad.com/">
+  <meta property="og:title" content="Afsaneh Rezaeinejad — Senior QA Engineer">
+  <meta property="og:description" content="Automation, performance, and AI-assisted quality engineering for complex products.">
+  <meta property="og:image" content="https://afsanehrezaeinejad.com/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Afsaneh Rezaeinejad, Senior QA Engineer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Afsaneh Rezaeinejad — Senior QA Engineer">
+  <meta name="twitter:description" content="Automation, performance, and AI-assisted quality engineering for complex products.">
+  <meta name="twitter:image" content="https://afsanehrezaeinejad.com/og.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Afsaneh Rezaeinejad",
+    "url": "https://afsanehrezaeinejad.com/",
+    "jobTitle": "Senior QA Engineer",
+    "email": "mailto:afsaneh.rezaee5@gmail.com",
+    "sameAs": [
+      "https://linkedin.com/in/afsaneh-rezaeinejad",
+      "https://github.com/Afsanehrezaeinejad"
+    ]
   }
-
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:'JetBrains Mono', monospace;
-    font-size:15px;
-    line-height:1.7;
-    -webkit-font-smoothing:antialiased;
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
-  }
-
-  a{color:inherit;}
-  a:focus-visible, button:focus-visible{outline:2px solid var(--mint); outline-offset:3px;}
-
-  h1,h2,h3{font-family:'Fraunces', serif; font-weight:500; margin:0;}
-
-  .layout{
-    display:flex;
-    min-height:100vh;
-    max-width:1280px;
-    margin:0 auto;
-  }
-
-  /* ---------- Sidebar ---------- */
-  .sidebar{
-    flex:0 0 320px;
-    padding:56px 40px;
-    position:sticky;
-    top:0;
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    border-right:1px solid var(--border);
-  }
-
-  .sidebar-top .name{
-    font-size:2rem;
-    line-height:1.2;
-    color:var(--text);
-  }
-
-  .sidebar-top .role{
-    margin-top:10px;
-    color:var(--mint);
-    font-size:0.9rem;
-  }
-
-  .sidebar-top .summary{
-    margin-top:22px;
-    color:var(--muted);
-    font-size:0.85rem;
-    line-height:1.8;
-    max-width:30ch;
-  }
-
-  nav.sidenav{
-    margin-top:44px;
-  }
-
-  nav.sidenav ul{
-    list-style:none;
-    padding:0;
-    margin:0;
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-  }
-
-  nav.sidenav a{
-    text-decoration:none;
-    color:var(--muted);
-    font-size:0.85rem;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    transition:color .15s ease;
-  }
-
-  nav.sidenav a .bar{
-    width:22px;
-    height:1px;
-    background:var(--muted);
-    transition:width .15s ease, background .15s ease;
-  }
-
-  nav.sidenav a:hover,
-  nav.sidenav a:focus-visible{ color:var(--text); }
-
-  nav.sidenav a:hover .bar,
-  nav.sidenav a:focus-visible .bar{
-    width:38px;
-    background:var(--mint);
-  }
-
-  .sidebar-bottom{
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-    font-size:0.8rem;
-  }
-
-  .sidebar-bottom a{
-    text-decoration:none;
-    color:var(--muted);
-    transition:color .15s ease;
-  }
-  .sidebar-bottom a:hover, .sidebar-bottom a:focus-visible{ color:var(--amber); }
-
-  /* ---------- Main content ---------- */
-  main{
-    flex:1;
-    padding:56px 56px 100px;
-    min-width:0;
-  }
-
-  section{
-    margin-bottom:88px;
-    max-width:680px;
-  }
-
-  section:first-of-type{margin-top:0;}
-
-  .section-heading{
-    font-size:1.5rem;
-    margin-bottom:28px;
-    color:var(--text);
-  }
-
-  /* Terminal banner */
-  .terminal{
-    background:var(--surface);
-    border:1px solid var(--border);
-    border-radius:6px;
-    padding:20px 22px;
-    font-size:0.85rem;
-    margin-bottom:36px;
-    color:var(--muted);
-  }
-  .terminal .line{ white-space:pre; }
-  .terminal .prompt{ color:var(--amber); }
-  .terminal .cmd{ color:var(--text); }
-  .terminal .caret{
-    display:inline-block;
-    width:8px;
-    height:1em;
-    background:var(--mint);
-    vertical-align:text-bottom;
-    animation:blink 1s steps(1) infinite;
-  }
-  @keyframes blink{ 50%{ opacity:0; } }
-  .terminal .result{ color:var(--mint); margin-top:10px; }
-
-  .intro p{
-    color:var(--muted);
-    font-size:0.95rem;
-    max-width:60ch;
-  }
-
-  /* Experience test-case cards */
-  .case{
-    border:1px solid var(--border);
-    border-radius:6px;
-    background:var(--surface);
-    padding:24px 26px;
-    margin-bottom:22px;
-  }
-
-  .case-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    flex-wrap:wrap;
-    gap:8px 16px;
-    margin-bottom:6px;
-  }
-
-  .case-title{
-    font-family:'Fraunces', serif;
-    font-size:1.15rem;
-    color:var(--text);
-  }
-
-  .case-status{
-    font-size:0.72rem;
-    letter-spacing:0.02em;
-    color:var(--mint);
-    background:var(--mint-dim);
-    border:1px solid rgba(177,153,253,0.35);
-    border-radius:4px;
-    padding:3px 8px;
-    white-space:nowrap;
-  }
-
-  .case-meta{
-    color:var(--muted);
-    font-size:0.8rem;
-    margin-bottom:16px;
-  }
-
-  .case-meta a{ color:var(--muted); text-decoration:underline; text-decoration-color:var(--border); }
-  .case-meta a:hover{ color:var(--amber); text-decoration-color:var(--amber); }
-
-  .assertions{
-    list-style:none;
-    padding:0;
-    margin:0;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-  }
-
-  .assertions li{
-    display:flex;
-    gap:10px;
-    font-size:0.85rem;
-    color:var(--text);
-    line-height:1.6;
-  }
-
-  .assertions li::before{
-    content:"✓";
-    color:var(--mint);
-    flex:0 0 auto;
-    font-size:0.85rem;
-    line-height:1.7;
-  }
-
-  /* Skills */
-  .skill-group{
-    margin-bottom:20px;
-  }
-  .skill-group h3{
-    font-size:0.78rem;
-    color:var(--amber);
-    font-family:'JetBrains Mono', monospace;
-    font-weight:600;
-    margin-bottom:12px;
-  }
-  .skill-tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-  }
-  .skill-tags span{
-    border:1px solid var(--border);
-    border-radius:4px;
-    padding:5px 10px;
-    font-size:0.78rem;
-    color:var(--muted);
-    background:var(--panel);
-  }
-
-  /* Education */
-  .edu-item{
-    border-left:2px solid var(--border);
-    padding-left:18px;
-    margin-bottom:20px;
-  }
-  .edu-item .degree{
-    font-family:'Fraunces', serif;
-    font-size:1.05rem;
-    color:var(--text);
-  }
-  .edu-item .school{
-    color:var(--muted);
-    font-size:0.82rem;
-    margin-top:4px;
-  }
-
-  /* Footer / contact */
-  footer{
-    max-width:680px;
-    border-top:1px solid var(--border);
-    padding-top:32px;
-  }
-  footer p{ color:var(--muted); font-size:0.85rem; }
-  footer a{ color:var(--mint); text-decoration:none; }
-  footer a:hover, footer a:focus-visible{ color:var(--amber); }
-
-  /* Mobile nav toggle - hidden on desktop */
-  .mobile-bar{ display:none; }
-
-  @media (max-width: 880px){
-    .layout{ flex-direction:column; }
-    .sidebar{
-      position:relative;
-      height:auto;
-      flex:none;
-      border-right:none;
-      border-bottom:1px solid var(--border);
-      padding:32px 24px;
-    }
-    nav.sidenav ul{
-      flex-direction:row;
-      flex-wrap:wrap;
-      gap:16px;
-    }
-    nav.sidenav a .bar{ display:none; }
-    .sidebar-bottom{ flex-direction:row; gap:18px; margin-top:24px; }
-    main{ padding:40px 24px 80px; }
-    section{ margin-bottom:64px; }
-  }
-</style>
+  </script>
 </head>
 <body>
-
-<div class="layout">
-  <aside class="sidebar">
-    <div class="sidebar-top">
-      <h1 class="name">Afsaneh<br>Rezaeinejad</h1>
-      <div class="role">Software QA Engineer</div>
-      <p class="summary">Building test automation that catches problems before users do — from AI-powered test generation to Karate-based API mocks, with a shift-left habit of showing up early.</p>
-
-      <nav class="sidenav" aria-label="Section navigation">
-        <ul>
-          <li><a href="#intro"><span class="bar"></span>Intro</a></li>
-          <li><a href="#experience"><span class="bar"></span>Experience</a></li>
-          <li><a href="#skills"><span class="bar"></span>Skills</a></li>
-          <li><a href="#education"><span class="bar"></span>Education</a></li>
-          <li><a href="#contact"><span class="bar"></span>Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="sidebar-bottom">
-      <a href="mailto:afsaneh.rezaee5@gmail.com">email</a>
-      <a href="https://linkedin.com/in/afsaneh-rezaeinejad" target="_blank" rel="noopener">linkedin</a>
-    </div>
-  </aside>
-
-  <main>
-    <section id="intro" class="intro">
-      <div class="terminal" role="img" aria-label="Terminal output showing a mock test run summary of eight years across four companies">
-        <div class="line"><span class="prompt">$</span> <span class="cmd">run career --suites=all</span><span class="caret"></span></div>
-        <div class="result">✓ 4 companies · 5 suites · 8 years · 0 regressions</div>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="page-shell">
+    <aside class="sidebar" aria-label="Portfolio overview">
+      <div>
+        <a class="identity" href="#top">
+          <span class="identity-mark" aria-hidden="true">AR</span>
+          <span><strong>Afsaneh Rezaeinejad</strong><small>Senior QA Engineer</small></span>
+        </a>
+        <p class="sidebar-intro">I design quality systems that help teams ship with confidence—from the first architecture conversation to the final release check.</p>
+        <div class="availability"><span class="status-dot" aria-hidden="true"></span>Open to meaningful conversations</div>
+        <nav class="section-nav" aria-label="Primary navigation">
+          <a href="#about" data-section="about"><span>01</span> About</a>
+          <a href="#experience" data-section="experience"><span>02</span> Experience</a>
+          <a href="#skills" data-section="skills"><span>03</span> Toolkit</a>
+          <a href="#education" data-section="education"><span>04</span> Education</a>
+          <a href="#contact" data-section="contact"><span>05</span> Contact</a>
+        </nav>
       </div>
-      <p>I'm a Senior QA Engineer currently at MoneyLion, where I build AI-powered test frameworks and API mocking layers for backend and platform teams. Before that, I spent over two years at Deriv testing wallets and authentication. I like getting into the design conversation before the first line of code is written — it's cheaper to prevent a bug than to automate around one. Below is the full run: every role, what I built, and what it changed.</p>
-    </section>
-
-    <section id="experience">
-      <h2 class="section-heading">Experience</h2>
-
-      <article class="case">
-        <div class="case-head">
-          <span class="case-title">Senior QA Engineer</span>
-          <span class="case-status">PASS</span>
-        </div>
-        <div class="case-meta">MoneyLion — October 2025 to Present</div>
-        <ul class="assertions">
-          <li>Built an AI-powered test case generation framework using RAG and Figma MCP that turns product requirements and Jira tickets into structured test cases, cutting manual test design effort.</li>
-          <li>Ran performance testing on a cron-based payment collection API to find its limits and fix bottlenecks affecting product quality.</li>
-          <li>Designed reusable Karate-based API mocks for the new Membership API, simulating Kafka events and scenario-specific responses so teams could develop the subscription plan in parallel.</li>
-          <li>Built Dockerized mock services and a scalable Karate integration framework, so backend engineers run integration and smoke tests at PR creation instead of after merge — faster defect detection, shorter feedback loops.</li>
-          <li>Built an MCP-based migration tool in Python that converts UI automation tests from Katalon to Appium, cutting migration effort by up to 70%.</li>
-          <li>Built an automation health dashboard in Snowflake and Periscope that lifted overall test stability from 70% to 80%.</li>
-        </ul>
-      </article>
-
-      <article class="case">
-        <div class="case-head">
-          <span class="case-title">Senior QA Automation Engineer</span>
-          <span class="case-status">PASS</span>
-        </div>
-        <div class="case-meta">Deriv, Malaysia — February 2023 to September 2025</div>
-        <ul class="assertions">
-          <li>Joined authentication design discussions early and reached 80% automation coverage before implementation finished, so the release shipped on time with no major issues.</li>
-          <li>Wrote Perl scripts to auto-generate test data, cutting manual testing hours by 60% and freeing the team for higher-value work.</li>
-          <li>Built and ran JMeter performance tests for key WebSocket APIs to keep releases stable under load.</li>
-          <li>Directed end-to-end automation for the Wallets feature with a Cypress suite that cut regression testing time by 50% and surfaced major bugs earlier.</li>
-          <li>Built GitHub Actions pipelines that run smoke tests on every commit, regression tests on demand, and sanity checks daily and post-release.</li>
-          <li>Evaluated AI-assisted testing tools — TestIM, TestSigma, Autify, and Octomind — to find the best fit for the project's coverage goals.</li>
-          <li>Mentored junior engineers and set the automation standards the team works to.</li>
-        </ul>
-      </article>
-
-      <article class="case">
-        <div class="case-head">
-          <span class="case-title">QA Automation Engineer</span>
-          <span class="case-status">PASS</span>
-        </div>
-        <div class="case-meta">Deriv, Malaysia — April 2022 to January 2023</div>
-        <ul class="assertions">
-          <li>Migrated test suites from Robot Framework to Cypress and enforced clean, maintainable test code, cutting regression testing time by 30%.</li>
-          <li>Kept Robot Framework code aligned with a fast-moving codebase, streamlining ongoing test maintenance.</li>
-          <li>Wrote a Perl script to automate environment setup for crypto-related testing, reducing manual effort by 30%.</li>
-          <li>Traced delays in AWS QA environment readiness and worked with DevOps to resolve them, shortening setup time for every test cycle after.</li>
-        </ul>
-      </article>
-
-      <article class="case">
-        <div class="case-head">
-          <span class="case-title">QA Engineer</span>
-          <span class="case-status">PASS</span>
-        </div>
-        <div class="case-meta">Dana Pardaz — April 2019 to March 2022</div>
-        <ul class="assertions">
-          <li>Automated functional tests with Selenium, improving regression efficiency and coverage across web modules.</li>
-          <li>Manually tested the API endpoints of an ITIL system with Postman, catching critical issues early and reducing post-release defects by 20%.</li>
-        </ul>
-      </article>
-
-      <article class="case">
-        <div class="case-head">
-          <span class="case-title">QA Engineer</span>
-          <span class="case-status">PASS</span>
-        </div>
-        <div class="case-meta">Hamavaran — May 2018 to March 2019</div>
-        <ul class="assertions">
-          <li>Ran investigative testing on VAS applications and communicated critical findings to improve product reliability.</li>
-        </ul>
-      </article>
-    </section>
-
-    <section id="skills">
-      <h2 class="section-heading">Skills</h2>
-
-      <div class="skill-group">
-        <h3>Automation Testing</h3>
-        <div class="skill-tags">
-          <span>Cypress</span><span>Playwright</span><span>Selenium</span><span>Robot Framework</span><span>Appium</span><span>Karate</span><span>Postman</span>
-        </div>
+      <div class="sidebar-links" aria-label="Social links">
+        <a href="mailto:afsaneh.rezaee5@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/afsaneh-rezaeinejad" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/Afsanehrezaeinejad" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
       </div>
-
-      <div class="skill-group">
-        <h3>Programming Languages</h3>
-        <div class="skill-tags">
-          <span>JavaScript</span><span>Python</span>
+    </aside>
+    <main id="main-content">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="eyebrow"><span aria-hidden="true">//</span> Quality engineering, built into delivery</div>
+        <h1 id="hero-title">I make complex systems <em>safer to ship.</em></h1>
+        <p class="hero-copy">Senior QA Engineer building automation frameworks, API simulation layers, and performance strategies that surface risk early—before it becomes expensive.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="mailto:afsaneh.rezaee5@gmail.com">Start a conversation <span aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="#experience">Explore my work</a>
         </div>
-      </div>
-
-      <div class="skill-group">
-        <h3>Performance Testing</h3>
-        <div class="skill-tags">
-          <span>JMeter</span><span>Grafana k6</span>
+        <div class="metrics" aria-label="Career highlights">
+          <div class="metric"><strong>8+</strong><span>years in quality engineering</span></div>
+          <div class="metric"><strong>70%</strong><span>less migration effort with AI tooling</span></div>
+          <div class="metric"><strong>80%</strong><span>automation stability achieved</span></div>
         </div>
-      </div>
-
-      <div class="skill-group">
-        <h3>CI/CD</h3>
-        <div class="skill-tags">
-          <span>Azure DevOps</span><span>GitHub Actions</span>
+        <div class="console" aria-label="Career test run summary">
+          <div class="console-bar"><div class="console-dots" aria-hidden="true"><span></span><span></span><span></span></div><span>career-suite.log</span><span>main</span></div>
+          <div class="console-body">
+            <p><span class="prompt">$</span> run career --suites=all --fail-fast</p>
+            <p><span class="pass">PASS</span> 5 companies · 5 suites · 8+ years</p>
+            <p><span class="pass">PASS</span> automation · performance · platform quality</p>
+            <p class="console-muted">Completed with a shift-left mindset in 0 regressions.</p>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section id="education">
-      <h2 class="section-heading">Education</h2>
-
-      <div class="edu-item">
-        <div class="degree">Master's Degree in IT Communication Networks</div>
-        <div class="school">Islamic Azad University · 2018 – 2020</div>
-      </div>
-
-      <div class="edu-item">
-        <div class="degree">Bachelor's Degree in IT</div>
-        <div class="school">Institute for Advanced Studies in Basic Sciences (IASBS) · 2014 – 2018</div>
-      </div>
-    </section>
-
-    <footer id="contact">
-      <p>Open to new opportunities and always happy to talk testing, automation, or wallets. Reach me at <a href="mailto:afsaneh.rezaee5@gmail.com">afsaneh.rezaee5@gmail.com</a> or on <a href="https://linkedin.com/in/afsaneh-rezaeinejad" target="_blank" rel="noopener">LinkedIn</a>.</p>
-    </footer>
-  </main>
-</div>
-
+      </section>
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="section-index" aria-hidden="true">01 / ABOUT</div>
+        <div class="section-heading"><h2 id="about-title">Quality is a design decision.</h2><p>I work best where product, engineering, and delivery meet.</p></div>
+        <div class="about-grid">
+          <p class="about-lead">I’m a Senior QA Engineer at MoneyLion, building AI-powered test frameworks and API mocking layers for backend and platform teams.</p>
+          <div class="about-copy"><p>Before that, I spent more than three years at Deriv testing wallets, authentication, and the systems around them. I like joining the design conversation before the first line of code is written—because preventing a defect is better than automating around one.</p><p>My work combines practical automation with systems thinking: stable pipelines, realistic mocks, useful performance signals, and test strategies that give teams faster feedback.</p></div>
+        </div>
+      </section>
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="section-index" aria-hidden="true">02 / EXPERIENCE</div>
+        <div class="section-heading"><h2 id="experience-title">Selected test runs.</h2><p>What I built, why it mattered, and the signal it created.</p></div>
+        <div class="timeline">
+          <article class="role-card">
+            <div class="role-topline"><span>Current suite</span><span class="role-status">Running</span></div>
+            <div class="role-heading"><div><h3>Senior QA Engineer</h3><p>MoneyLion</p></div><time datetime="2025-10">Oct 2025 — Present</time></div>
+            <ul class="achievement-list">
+              <li>Built an AI-powered test case generation framework using RAG and Figma MCP that turns product requirements and Jira tickets into structured test cases, cutting manual test design effort.</li>
+              <li>Designed reusable Karate-based API mocks for the new Membership API, simulating Kafka events and scenario-specific responses so teams could develop the subscription plan in parallel.</li>
+              <li>Built an MCP-based migration tool in Python that converts UI automation tests from Katalon to Appium, cutting migration effort by up to 70%.</li>
+            </ul>
+            <details><summary>View 3 more outcomes <span aria-hidden="true">+</span></summary><ul class="achievement-list details-list">
+              <li>Ran performance testing on a cron-based payment collection API to find its limits and fix bottlenecks affecting product quality.</li>
+              <li>Built Dockerized mock services and a scalable Karate integration framework, so backend engineers run integration and smoke tests at PR creation instead of after merge—faster defect detection, shorter feedback loops.</li>
+              <li>Built an automation health dashboard in Snowflake and Periscope that lifted overall test stability from 70% to 80%.</li>
+            </ul></details>
+            <div class="role-tags"><span>AI + RAG</span><span>Karate</span><span>Appium</span><span>Performance</span></div>
+          </article>
+          <article class="role-card">
+            <div class="role-topline"><span>Suite 04</span><span class="role-status role-status-pass">Passed</span></div>
+            <div class="role-heading"><div><h3>Senior QA Automation Engineer</h3><p>Deriv · Malaysia</p></div><time datetime="2023-02">Feb 2023 — Sep 2025</time></div>
+            <ul class="achievement-list">
+              <li>Joined authentication design discussions early and reached 80% automation coverage before implementation finished, so the release shipped on time with no major issues.</li>
+              <li>Wrote Perl scripts to auto-generate test data, cutting manual testing hours by 60% and freeing the team for higher-value work.</li>
+              <li>Directed end-to-end automation for the Wallets feature with a Cypress suite that cut regression testing time by 50% and surfaced major bugs earlier.</li>
+            </ul>
+            <details><summary>View 4 more outcomes <span aria-hidden="true">+</span></summary><ul class="achievement-list details-list">
+              <li>Built and ran JMeter performance tests for key WebSocket APIs to keep releases stable under load.</li>
+              <li>Built GitHub Actions pipelines that run smoke tests on every commit, regression tests on demand, and sanity checks daily and post-release.</li>
+              <li>Evaluated AI-assisted testing tools—TestIM, TestSigma, Autify, and Octomind—to find the best fit for the project’s coverage goals.</li>
+              <li>Mentored junior engineers and set the automation standards the team works to.</li>
+            </ul></details>
+            <div class="role-tags"><span>Cypress</span><span>JMeter</span><span>GitHub Actions</span><span>WebSocket</span></div>
+          </article>
+          <article class="role-card role-card-compact">
+            <div class="role-topline"><span>Suite 03</span><span class="role-status role-status-pass">Passed</span></div>
+            <div class="role-heading"><div><h3>QA Automation Engineer</h3><p>Deriv · Malaysia</p></div><time datetime="2022-04">Apr 2022 — Jan 2023</time></div>
+            <ul class="achievement-list"><li>Migrated test suites from Robot Framework to Cypress and enforced clean, maintainable test code, cutting regression testing time by 30%.</li><li>Wrote a Perl script to automate environment setup for crypto-related testing, reducing manual effort by 30%.</li></ul>
+            <details><summary>View 2 more outcomes <span aria-hidden="true">+</span></summary><ul class="achievement-list details-list"><li>Kept Robot Framework code aligned with a fast-moving codebase, streamlining ongoing test maintenance.</li><li>Traced delays in AWS QA environment readiness and worked with DevOps to resolve them, shortening setup time for every test cycle after.</li></ul></details>
+          </article>
+          <article class="role-card role-card-compact">
+            <div class="role-topline"><span>Suite 02</span><span class="role-status role-status-pass">Passed</span></div>
+            <div class="role-heading"><div><h3>QA Engineer</h3><p>Dana Pardaz</p></div><time datetime="2019-04">Apr 2019 — Mar 2022</time></div>
+            <ul class="achievement-list"><li>Automated functional tests with Selenium, improving regression efficiency and coverage across web modules.</li></ul>
+            <details><summary>View 1 more outcome <span aria-hidden="true">+</span></summary><ul class="achievement-list details-list"><li>Manually tested the API endpoints of an ITIL system with Postman, catching critical issues early and reducing post-release defects by 20%.</li></ul></details>
+          </article>
+          <article class="role-card role-card-compact">
+            <div class="role-topline"><span>Suite 01</span><span class="role-status role-status-pass">Passed</span></div>
+            <div class="role-heading"><div><h3>QA Engineer</h3><p>Hamavaran</p></div><time datetime="2018-05">May 2018 — Mar 2019</time></div>
+            <ul class="achievement-list"><li>Ran investigative testing on VAS applications and communicated critical findings to improve product reliability.</li></ul>
+          </article>
+        </div>
+      </section>
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="section-index" aria-hidden="true">03 / TOOLKIT</div>
+        <div class="section-heading"><h2 id="skills-title">Tools follow the risk.</h2><p>I choose the smallest reliable toolchain for the feedback a team needs.</p></div>
+        <div class="toolkit-grid">
+          <article class="toolkit-card"><span class="toolkit-number">01</span><h3>Automation</h3><p>Cypress · Playwright · Selenium · Robot Framework · Appium · Karate · Postman</p></article>
+          <article class="toolkit-card"><span class="toolkit-number">02</span><h3>Languages</h3><p>JavaScript · Python · Perl scripting</p></article>
+          <article class="toolkit-card"><span class="toolkit-number">03</span><h3>Performance</h3><p>JMeter · Grafana k6 · API and WebSocket load testing</p></article>
+          <article class="toolkit-card"><span class="toolkit-number">04</span><h3>Delivery</h3><p>Azure DevOps · GitHub Actions · Docker · shift-left quality</p></article>
+        </div>
+      </section>
+      <section class="section" id="education" aria-labelledby="education-title">
+        <div class="section-index" aria-hidden="true">04 / EDUCATION</div>
+        <div class="section-heading"><h2 id="education-title">Built on systems thinking.</h2></div>
+        <div class="education-list">
+          <article><span>2018 — 2020</span><div><h3>Master’s Degree in IT Communication Networks</h3><p>Islamic Azad University</p></div></article>
+          <article><span>2014 — 2018</span><div><h3>Bachelor’s Degree in IT</h3><p>Institute for Advanced Studies in Basic Sciences (IASBS)</p></div></article>
+        </div>
+      </section>
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-copy"><div class="section-index" aria-hidden="true">05 / CONTACT</div><h2 id="contact-title">Let’s make the next release feel boring.</h2><p>The good kind of boring: predictable, observable, and already tested where it matters.</p></div>
+        <a class="contact-link" href="mailto:afsaneh.rezaee5@gmail.com"><span>Get in touch</span><strong>afsaneh.rezaee5@gmail.com</strong><i aria-hidden="true">↗</i></a>
+      </section>
+      <footer><p>Designed around evidence. Built for the web.</p><p>© <span id="year">2026</span> Afsaneh Rezaeinejad</p></footer>
+    </main>
+  </div>
+  <script src="/script.js" defer></script>
 </body>
 </html>
