@@ -12,7 +12,7 @@
 /404.html
   Cache-Control: public, max-age=0, must-revalidate
 
-/styles.css
+/styles-20261006.css
   Cache-Control: public, max-age=0, must-revalidate
 
 /script.js
