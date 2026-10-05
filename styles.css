@@ -120,9 +120,9 @@ details[open] summary span { transform: rotate(45deg); }
 .contact-copy > p { max-width: 570px; color: var(--muted); }
 .contact-links { margin-top: 31px; padding-top: 20px; border-top: 1px solid var(--line); display: grid; gap: 16px; }
 .contact-links-label { color: var(--muted); font: 0.65rem var(--mono); }
-.contact-platforms { display: flex; flex-wrap: wrap; gap: clamp(18px, 4vw, 38px); }
-.contact-platforms a { width: 58px; height: 58px; display: grid; place-items: center; border-radius: 8px; color: var(--muted); text-decoration: none; transition: color 180ms ease, background 180ms ease, transform 180ms ease; }
-.contact-platforms svg { width: 43px; height: 43px; fill: currentColor; }
+.contact-platforms { display: flex; flex-wrap: wrap; gap: clamp(12px, 2.5vw, 24px); }
+.contact-platforms a { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 8px; color: var(--muted); text-decoration: none; transition: color 180ms ease, background 180ms ease, transform 180ms ease; }
+.contact-platforms svg { display: block; width: 30px; height: 30px; max-width: 30px; max-height: 30px; flex: none; fill: currentColor; }
 .contact-platforms a:hover { color: var(--violet-bright); background: rgba(190, 167, 255, 0.08); transform: translateY(-3px); }
 footer { display: flex; justify-content: space-between; gap: 20px; padding-top: 25px; border-top: 1px solid var(--line); color: #777080; font: 0.61rem var(--mono); }
 footer p { margin-bottom: 0; }
@@ -157,7 +157,7 @@ footer p { margin-bottom: 0; }
   .role-heading { display: block; }
   .role-heading time { display: block; margin-top: 10px; }
   .contact { margin-top: 90px; padding: 31px 25px; }
-  .contact-platforms { gap: 15px; }
+  .contact-platforms { gap: 12px; }
 }
 @media (max-width: 520px) {
   body { font-size: 15px; }
