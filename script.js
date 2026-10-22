@@ -1,8 +1,14 @@
 (() => {
+  const root = document.documentElement;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (!reduceMotion && "IntersectionObserver" in window) root.classList.add("js");
+
   const navLinks = [...document.querySelectorAll(".section-nav a[data-section]")];
   const sections = navLinks.map((link) => document.getElementById(link.dataset.section)).filter(Boolean);
+
   if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver((entries) => {
+    const navObserver = new IntersectionObserver((entries) => {
       const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
       if (!visible) return;
       navLinks.forEach((link) => {
@@ -10,8 +16,31 @@
         else link.removeAttribute("aria-current");
       });
     }, { rootMargin: "-20% 0px -62%", threshold: [0, 0.2, 0.5] });
-    sections.forEach((section) => observer.observe(section));
+    sections.forEach((section) => navObserver.observe(section));
+
+    if (!reduceMotion) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      }, { rootMargin: "0px 0px -8%", threshold: 0.08 });
+
+      document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+    }
   }
+
+  document.querySelectorAll("details").forEach((details) => {
+    const label = details.querySelector(".summary-label");
+    if (!label) return;
+    const syncLabel = () => {
+      label.textContent = details.open ? label.dataset.open : label.dataset.closed;
+    };
+    details.addEventListener("toggle", syncLabel);
+    syncLabel();
+  });
+
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 })();
