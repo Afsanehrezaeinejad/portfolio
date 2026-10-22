@@ -31,16 +31,6 @@
     }
   }
 
-  document.querySelectorAll("details").forEach((details) => {
-    const label = details.querySelector(".summary-label");
-    if (!label) return;
-    const syncLabel = () => {
-      label.textContent = details.open ? label.dataset.open : label.dataset.closed;
-    };
-    details.addEventListener("toggle", syncLabel);
-    syncLabel();
-  });
-
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 })();
