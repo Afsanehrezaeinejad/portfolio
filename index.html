@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#111019">
   <link rel="canonical" href="https://afsanehrezaeinejad.com/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles-20261006.css?v=20261022-4">
+  <link rel="stylesheet" href="styles-20261006.css?v=20261024-10">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://afsanehrezaeinejad.com/">
   <meta property="og:title" content="Afsaneh Rezaeinejad — Senior QA Engineer">
@@ -40,10 +40,10 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <div class="nav-shell">
-      <a class="brand" href="#top" aria-label="Afsaneh Rezaeinejad, home">Afsaneh Rezaeinejad</a>
+      <a class="brand" href="/" aria-label="Afsaneh Rezaeinejad, home">Afsaneh Rezaeinejad</a>
       <nav class="section-nav" aria-label="Primary navigation">
         <a href="#work" data-section="work">Work</a>
-        <a href="#journey" data-section="journey">Experience</a>
+        <a href="#experience" data-section="experience">Experience</a>
         <a href="#approach" data-section="approach">Approach</a>
         <a href="#contact" data-section="contact">Contact</a>
       </nav>
@@ -52,57 +52,48 @@
   </header>
 
   <main id="main-content">
-    <section class="hero" id="top" aria-labelledby="hero-title">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="hero-shell">
         <div class="hero-content">
           <div class="eyebrow">Senior QA Engineer <span aria-hidden="true">·</span> Kuala Lumpur</div>
-          <h1 id="hero-title">I make complex systems <em>safer to ship.</em></h1>
+          <h1 id="hero-title"><span>I make complex<br>systems</span> <em>safer to ship.</em></h1>
           <p class="hero-copy">I design automation, realistic API simulations, and performance strategies that turn delivery risk into fast, actionable feedback.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="mailto:afsaneh.rezaee5@gmail.com">Email Afsaneh <span aria-hidden="true">↗</span></a>
-            <a class="button button-secondary button-external" href="https://www.linkedin.com/in/afsaneh-rezaeinejad-48ba454a/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="mailto:afsaneh.rezaee5@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
             <a class="button button-secondary" href="output/pdf/Afsaneh-Rezaeinejad-Resume.pdf" download>Download résumé <span aria-hidden="true">↓</span></a>
           </div>
-          <p class="opportunity-note">Open to senior QA engineering and quality consulting conversations.</p>
         </div>
-        <div class="hero-visual" aria-label="Professional portrait of Afsaneh Rezaeinejad">
+        <div class="hero-visual">
           <div class="portrait-frame">
-            <span class="portrait-orbit" aria-hidden="true"></span>
             <img src="profile-photo.png" alt="Professional portrait of Afsaneh Rezaeinejad" width="512" height="512" fetchpriority="high">
           </div>
+          <div class="experience-badge"><strong>8+</strong><span>Years of<br>experience</span></div>
         </div>
-      </div>
-      <div class="proof-rail" aria-label="Career highlights">
-        <div class="proof"><strong>8+</strong><span>Years in quality engineering</span></div>
-        <div class="proof"><strong>Up to 70%</strong><span>Less Katalon-to-Appium migration effort</span></div>
-        <div class="proof"><strong>50%</strong><span>Shorter Wallets regression cycle</span></div>
-        <div class="proof"><strong>PR-level</strong><span>Integration feedback before merge</span></div>
       </div>
     </section>
 
     <section class="section work-section" id="work" aria-labelledby="work-title">
       <div class="section-intro reveal">
-        <div class="section-index">01 / SELECTED WORK</div>
-        <h2 id="work-title">From delivery risk to <em>engineering leverage.</em></h2>
-        <p>Each challenge began with slow migration, late coverage, or costly regression—and ended with a reusable quality system that helped the team move faster with confidence.</p>
+        <div class="section-index">SELECTED WORK</div>
+        <h2 id="work-title">Systems that changed how teams <em>delivered.</em></h2>
+        <p>Three examples of finding the real constraint, building a reusable solution, and improving how a team ships.</p>
       </div>
 
       <div class="case-grid">
         <article class="case-study case-featured reveal">
           <div class="case-result">
-            <span class="case-number">MONEYLION · AUTOMATION MIGRATION</span>
+            <span class="case-number">MONEYLION · PLATFORM MIGRATION</span>
             <strong><small>Up to</small>70%</strong>
             <p>less migration effort</p>
           </div>
           <div class="case-narrative">
-            <div class="case-eyebrow">Automation transformation</div>
+            <div class="case-eyebrow">Turn a rewrite into a repeatable tool</div>
             <h3>Automating a test-platform migration.</h3>
             <p class="case-summary">Moving UI automation from Katalon to Appium risked becoming a slow, manual rewrite.</p>
             <dl class="case-details">
               <div><dt>What I built</dt><dd>A Python migration tool, built with Model Context Protocol (MCP), that converts existing Katalon UI tests to Appium.</dd></div>
               <div><dt>Value delivered</dt><dd>Cut migration effort by up to 70%, protecting engineering time while accelerating the move to the new stack.</dd></div>
             </dl>
-            <div class="story-tags"><span>Python</span><span>MCP</span><span>Appium</span><span>Test architecture</span></div>
           </div>
         </article>
 
@@ -113,14 +104,13 @@
             <p>authentication-flow automation coverage before implementation finished</p>
           </div>
           <div class="case-narrative">
-            <div class="case-eyebrow">Release risk · Authentication</div>
+            <div class="case-eyebrow">Move quality before implementation</div>
             <h3>Building coverage before implementation finished.</h3>
             <p class="case-summary">A critical authentication release needed meaningful coverage without waiting for development to finish.</p>
             <dl class="case-details">
               <div><dt>What I changed</dt><dd>Joined design discussions early and built automation in parallel with implementation.</dd></div>
               <div><dt>Value delivered</dt><dd>The release shipped on time with no major issues.</dd></div>
             </dl>
-            <div class="story-tags"><span>Shift left</span><span>Authentication</span><span>Automation strategy</span></div>
           </div>
         </article>
 
@@ -131,36 +121,24 @@
             <p>shorter Wallets regression cycle</p>
           </div>
           <div class="case-narrative">
-            <div class="case-eyebrow">End-to-end quality · Wallets</div>
+            <div class="case-eyebrow">Protect speed without losing confidence</div>
             <h3>Cutting Wallets regression time in half.</h3>
             <p class="case-summary">The Wallets journey needed dependable end-to-end coverage without slowing every release.</p>
             <dl class="case-details">
               <div><dt>What I built</dt><dd>Directed a Cypress automation suite across the critical Wallets experience.</dd></div>
               <div><dt>Value delivered</dt><dd>Cut regression time in half and surfaced major bugs earlier.</dd></div>
             </dl>
-            <div class="story-tags"><span>Cypress</span><span>Wallets</span><span>End-to-end</span></div>
           </div>
         </article>
       </div>
 
-      <div class="evidence-block reveal" aria-labelledby="evidence-title">
-        <div class="evidence-heading"><span class="section-index">BREADTH OF IMPACT</span><h3 id="evidence-title">Impact across the delivery lifecycle.</h3></div>
-        <div class="evidence-grid">
-          <article><strong>AI-assisted</strong><p>Built an AI test-design framework using retrieval-augmented generation (RAG) to convert requirements, Jira tickets, and Figma designs into structured test cases.</p><span>Test design systems · MoneyLion</span></article>
-          <article><strong>Parallel delivery</strong><p>Unblocked subscription development with reusable Karate mocks, simulated Kafka event flows, and scenario-specific responses.</p><span>API simulation · MoneyLion</span></article>
-          <article><strong>+10 points</strong><p>Increased overall automation stability from 70% to 80% with a health dashboard that made suite health visible in Snowflake and Periscope.</p><span>Automation health monitoring · MoneyLion</span></article>
-          <article><strong>60%</strong><p>Cut manual testing time with Perl scripts that generate test data automatically.</p><span>Test-data automation · Deriv</span></article>
-          <article><strong>30%</strong><p>Cut regression time while modernizing the automation stack from Robot Framework to Cypress.</p><span>Framework modernization · Deriv</span></article>
-          <article><strong>20%</strong><p>Reduced post-release defects by testing ITIL API endpoints early with Postman.</p><span>Early defect prevention · Dana Pardaz</span></article>
-        </div>
-      </div>
     </section>
 
-    <section class="section journey-section" id="journey" aria-labelledby="journey-title">
+    <section class="section journey-section" id="experience" aria-labelledby="journey-title">
       <div class="section-intro reveal">
-        <div class="section-index">02 / EXPERIENCE</div>
-        <h2 id="journey-title">From finding defects to designing the systems that <em>prevent them.</em></h2>
-        <p>Over eight years, my scope has grown from hands-on product testing to shared quality infrastructure that helps entire engineering teams expose risk earlier.</p>
+        <div class="section-index">EXPERIENCE</div>
+        <h2 id="journey-title">From finding defects to designing systems that <em>prevent them.</em></h2>
+        <p>My scope has grown from hands-on investigation to reusable quality infrastructure, earlier delivery feedback, and technical standards other engineers can build on.</p>
       </div>
       <div class="journey-layout">
         <aside class="journey-thesis reveal" aria-label="Career progression">
@@ -169,103 +147,84 @@
         </aside>
         <div class="journey-list">
           <article class="journey-chapter journey-current reveal">
-            <span class="journey-node" aria-hidden="true"></span>
             <div class="journey-chapter-content">
-              <div class="chapter-kicker"><span>CURRENT ROLE</span><span>DESIGN THE SYSTEM</span></div>
-              <div class="role-heading"><div><p class="role-company">MoneyLion</p><h3>Senior QA Engineer</h3></div><time datetime="2025-10">Oct 2025 — Present</time></div>
-              <p class="role-turn">Designing reusable quality systems that remove delivery dependencies and put actionable feedback directly into engineering workflows.</p>
-              <div class="role-proof-grid role-proof-grid-labels">
-                <div><strong>Shared infrastructure</strong><p>Dockerized mocks and integration and smoke-test feedback when a pull request is opened.</p></div>
-                <div><strong>Automation transformation</strong><p>Up to 70% less migration effort through a Python tool that converts Katalon tests to Appium.</p></div>
-                <div><strong>Quality visibility</strong><p>Overall automation stability increased from 70% to 80% through a Snowflake and Periscope health dashboard.</p></div>
-              </div>
-              <div class="role-tags"><span>AI / RAG</span><span>Test architecture</span><span>API simulation</span><span>Platform enablement</span></div>
+              <div class="role-heading"><div><p class="role-company">Hilti Asia IT Services</p><h3>Test Automation Engineer</h3></div><time datetime="2026-06">Jun 2026 — Present</time></div>
+              <p class="role-turn">Building AI-assisted automation and delivery systems for SAP quality engineering, performance testing, onboarding, and access operations.</p>
               <ul class="role-signal-list">
-                <li>Built an AI test-design framework using retrieval-augmented generation (RAG) and Figma MCP to turn requirements, Jira tickets, and designs into structured test cases.</li>
-                <li>Created reusable Karate mocks for the Membership API—including Kafka events and scenario-specific responses—so teams could develop the subscription plan in parallel.</li>
-                <li>Performance-tested a cron-based payment collection API to identify capacity limits and product-quality bottlenecks.</li>
+                <li>Designed GitLab CI/CD pipelines integrated with Tricentis Tosca to automate SAP S/4HANA regression execution, reducing regression time by 20%.</li>
+                <li>Used generative AI to automate LoadRunner script generation, accelerating performance-test development and reducing manual scripting effort.</li>
+                <li>Built a Microsoft Copilot onboarding agent that helps new team members retrieve project knowledge and navigate internal processes through natural-language questions.</li>
+                <li>Developed an intelligent SAP license-management bot that validates requests, verifies authorization, checks license availability, and automates user provisioning and deprovisioning.</li>
               </ul>
             </div>
           </article>
 
           <article class="journey-chapter reveal">
-            <span class="journey-node" aria-hidden="true"></span>
             <div class="journey-chapter-content">
-              <div class="chapter-kicker"><span>CAREER PROGRESSION</span><span>MOVE QUALITY EARLIER</span></div>
+              <div class="role-heading"><div><p class="role-company">MoneyLion</p><h3>Senior QA Engineer</h3></div><time datetime="2025-10">Oct 2025 — May 2026</time></div>
+              <p class="role-turn">Designed AI-assisted test systems, reusable API simulations, and pull-request feedback for backend and platform teams.</p>
+              <ul class="role-signal-list">
+                <li>Built a test-design framework using retrieval-augmented generation (RAG) and Figma MCP to turn requirements, Jira tickets, and designs into structured test cases.</li>
+                <li>Created reusable Karate mocks and simulated Kafka events so subscription teams could develop against realistic scenarios in parallel.</li>
+                <li>Performance-tested a payment collection API and built automation-health visibility in Snowflake and Periscope.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="journey-chapter reveal">
+            <div class="journey-chapter-content">
               <p class="role-company">Deriv · Malaysia</p>
-              <p class="company-bridge">Across two roles, I progressed from modernizing automation to shaping high-risk releases before implementation was complete.</p>
+              <p class="company-bridge">Progressed from modernizing automation to shaping authentication, Wallets, performance testing, delivery pipelines, and team standards.</p>
               <div class="role-era">
                 <div class="role-heading"><h3>Senior QA Automation Engineer</h3><time datetime="2023-02">Feb 2023 — Sep 2025</time></div>
-                <p class="role-turn">Brought quality into authentication design, release pipelines, performance testing, and team standards.</p>
-                <div class="role-proof-grid">
-                  <div><strong>80%</strong><p>authentication-flow automation coverage before implementation finished; the release shipped on time with no major issues.</p></div>
-                  <div><strong>50%</strong><p>faster Wallets regression through a focused Cypress end-to-end suite.</p></div>
-                  <div><strong>60%</strong><p>less manual testing time through automated test-data generation.</p></div>
-                </div>
-                <div class="role-tags"><span>Quality leadership</span><span>Cypress</span><span>Performance</span><span>CI/CD</span></div>
                 <ul class="role-signal-list">
-                  <li>Built JMeter performance tests for critical WebSocket APIs to assess release behavior under load.</li>
-                  <li>Built GitHub Actions pipelines for commit-level smoke tests, on-demand regression, and daily and post-release sanity checks.</li>
-                  <li>Evaluated TestIM, TestSigma, Autify, and Octomind against the project’s coverage goals.</li>
-                  <li>Mentored junior engineers and established the team’s automation standards.</li>
+                  <li>Joined authentication design discussions early and reached 80% automation coverage before implementation finished; the release shipped on time with no major issues.</li>
+                  <li>Built GitHub Actions pipelines for commit-level smoke tests, on-demand regression, and scheduled release checks.</li>
+                  <li>Designed JMeter tests for critical WebSocket APIs, mentored junior engineers, and established automation standards.</li>
                 </ul>
               </div>
               <div class="role-era role-era-earlier">
                 <div class="role-heading"><h3>QA Automation Engineer</h3><time datetime="2022-04">Apr 2022 — Jan 2023</time></div>
-                <p class="role-turn">Modernized the test stack and removed recurring environment friction as the product changed.</p>
-                <div class="compact-proof"><span><strong>30%</strong> faster regression</span><span><strong>30%</strong> less manual environment setup</span></div>
                 <ul class="role-signal-list role-signal-list-compact">
-                  <li>Maintained Robot Framework coverage against a fast-moving codebase.</li>
-                  <li>Diagnosed AWS QA-environment readiness delays and partnered with DevOps to shorten setup time for subsequent test cycles.</li>
+                  <li>Modernized Robot Framework coverage with Cypress and worked with DevOps to remove recurring environment delays.</li>
                 </ul>
               </div>
             </div>
           </article>
 
           <article class="journey-chapter reveal">
-            <span class="journey-node" aria-hidden="true"></span>
             <div class="journey-chapter-content">
-              <div class="chapter-kicker"><span>EARLY CAREER</span><span>AUTOMATE THE REPEATABLE</span></div>
               <div class="role-heading"><div><p class="role-company">Dana Pardaz</p><h3>QA Engineer</h3></div><time datetime="2019-04">Apr 2019 — Mar 2022</time></div>
-              <p class="role-turn">Expanded web regression coverage and introduced earlier API-risk detection for an ITIL product.</p>
-              <div class="role-proof-grid role-proof-grid-two">
-                <div><strong>20%</strong><p>fewer post-release defects after early Postman testing exposed critical API issues.</p></div>
-                <div><strong>Selenium</strong><p>automation turned repeatable web checks into broader, more efficient regression coverage.</p></div>
-              </div>
-              <div class="role-tags"><span>Web automation</span><span>API testing</span><span>Early defect prevention</span></div>
+              <p class="role-turn">Introduced Selenium automation for repeatable web regression and earlier Postman API validation for an ITIL product.</p>
             </div>
           </article>
 
           <article class="journey-chapter journey-foundation reveal">
-            <span class="journey-node" aria-hidden="true"></span>
             <div class="journey-chapter-content">
-              <div class="chapter-kicker"><span>FOUNDATION</span><span>LEARN TO SEE</span></div>
               <div class="role-heading"><div><p class="role-company">Hamavaran</p><h3>QA Engineer</h3></div><time datetime="2018-05">May 2018 — Mar 2019</time></div>
-              <p class="role-turn">Built the investigative foundation: exploring value-added service (VAS) applications, isolating product risks, and communicating critical findings clearly.</p>
-              <p class="foundation-note">Contribution: translated critical findings into clear product feedback to improve reliability.</p>
+              <p class="role-turn">Built an investigative foundation by testing value-added service (VAS) applications, isolating product risk, and communicating critical findings clearly.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="belief reveal" aria-label="Quality philosophy">
-      <span class="section-index">A PRINCIPLE I WORK BY</span>
-      <blockquote>“Preventing a defect is better than <em>automating around one.</em>”</blockquote>
-      <p>I work best where product, engineering, and delivery meet—joining the design conversation early, then building the signals that help teams move with confidence.</p>
-    </section>
-
     <section class="section approach-section" id="approach" aria-labelledby="approach-title">
       <div class="section-intro reveal">
-        <div class="section-index">03 / APPROACH</div>
-        <h2 id="approach-title">Quality is designed into <em>the system.</em></h2>
-        <p>I choose the smallest reliable toolchain for feedback a team can trust and act on.</p>
+        <div class="section-index">HOW I WORK</div>
+        <h2 id="approach-title">Quality begins before <em>the test.</em></h2>
+        <p>I help teams reason about risk, simulate what is not ready yet, and put trustworthy feedback where engineering work happens.</p>
       </div>
       <div class="approach-grid">
-        <article class="approach-card reveal"><h3>See risk early.</h3><p>Join product conversations before implementation and test the assumptions that matter most.</p></article>
-        <article class="approach-card reveal"><h3>Simulate reality.</h3><p>Give teams dependable environments and believable scenarios before every dependency is ready.</p></article>
-        <article class="approach-card reveal"><h3>Automate feedback.</h3><p>Put fast, maintainable signals into the delivery path where engineers can act on them.</p></article>
+        <article class="approach-card reveal"><h3>Start with risk.</h3><p>Join product and engineering conversations early enough to challenge assumptions before they become defects.</p></article>
+        <article class="approach-card reveal"><h3>Test before dependencies are ready.</h3><p>Use realistic API mocks, test data, and failure scenarios so teams can validate critical flows without waiting for every service to be available.</p></article>
+        <article class="approach-card reveal"><h3>Catch regressions before merge.</h3><p>Run reliable automated checks in pull requests and delivery pipelines so engineers get actionable feedback while changes are still easy to fix.</p></article>
       </div>
+      <div class="mentor-note reveal" aria-labelledby="mentor-title">
+        <div><span class="section-index">MENTORSHIP</span><h3 id="mentor-title">Quality scales through people, too.</h3></div>
+        <div><p>At Deriv, I mentored junior engineers and established the automation standards the team worked to. I make the reasoning visible: how to identify meaningful risk, choose the smallest useful tool, and write tests another engineer can trust.</p></div>
+      </div>
+      <div class="toolkit-heading reveal"><span class="section-index">TECHNICAL TOOLKIT</span><h3>Tools grouped by the job they do.</h3></div>
       <div class="capability-index reveal" aria-label="Technical toolkit">
         <div><span>Automation</span><p>Cypress · Playwright · Selenium · Robot Framework · Appium</p></div>
         <div><span>APIs &amp; simulation</span><p>Karate · Postman · Kafka event flows · API &amp; WebSocket testing</p></div>
@@ -277,7 +236,7 @@
     </section>
 
     <section class="section education-section" id="education" aria-labelledby="education-title">
-      <div class="education-heading reveal"><div><span class="section-index">04 / EDUCATION</span><h2 id="education-title">Built on systems thinking.</h2></div><p>Formal foundations in information technology and communication networks.</p></div>
+      <div class="education-heading reveal"><div><span class="section-index">EDUCATION</span><h2 id="education-title">Built on systems thinking.</h2></div><p>Formal foundations in information technology and communication networks.</p></div>
       <div class="education-list reveal">
         <article><span>2018 — 2020</span><div><h3>Master’s Degree in IT Communication Networks</h3><p>Islamic Azad University</p></div></article>
         <article><span>2014 — 2018</span><div><h3>Bachelor’s Degree in IT</h3><p>Institute for Advanced Studies in Basic Sciences (IASBS)</p></div></article>
@@ -285,7 +244,7 @@
     </section>
 
     <section class="contact reveal" id="contact" aria-labelledby="contact-title">
-      <div class="contact-copy"><div class="section-index">05 / CONTACT</div><h2 id="contact-title">Let’s make the next release feel <em>boring.</em></h2><p>The good kind of boring: predictable, observable, and already tested where it matters.</p><a class="button button-primary" href="mailto:afsaneh.rezaee5@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a></div>
+      <div class="contact-copy"><div class="section-index">CONTACT</div><h2 id="contact-title">Let’s make the next release feel <em>boring.</em></h2><p>The good kind of boring: predictable, observable, and already tested where it matters.</p><a class="button button-primary" href="mailto:afsaneh.rezaee5@gmail.com">Discuss a QA challenge <span aria-hidden="true">↗</span></a></div>
       <div class="contact-links">
         <span class="contact-links-label">Find me online</span>
         <nav class="contact-platforms" aria-label="Contact links">
@@ -298,6 +257,6 @@
 
     <footer><p>QA automation · API simulation · performance engineering</p><p>© <span id="year">2026</span> Afsaneh Rezaeinejad</p></footer>
   </main>
-  <script src="script.js" defer></script>
+  <script src="script.js?v=20261024-2" defer></script>
 </body>
 </html>

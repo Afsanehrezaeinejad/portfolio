@@ -28,6 +28,16 @@
       }, { rootMargin: "0px 0px -8%", threshold: 0.08 });
 
       document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+
+      const workSection = document.querySelector(".work-section");
+      if (workSection) {
+        const workTransitionObserver = new IntersectionObserver(([entry]) => {
+          workSection.classList.toggle("transition-active", entry.isIntersecting);
+          root.classList.toggle("work-transition-active", entry.isIntersecting);
+        }, { rootMargin: "0px 0px -18%", threshold: 0.01 });
+
+        workTransitionObserver.observe(workSection);
+      }
     }
   }
 
